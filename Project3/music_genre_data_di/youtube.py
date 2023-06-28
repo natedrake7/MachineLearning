@@ -7,8 +7,8 @@ hop_length = (50 * 1e-3)
 mel_time_size = 21
 
 
-def download_youtube(url):
-    command = f'youtube-dl --extract-audio --audio-format wav --output temp.wav --postprocessor-args "-ar 8000" ' + url + " --quiet"
+def download_youtube(url,filename):
+    command = f'yt-dlp -x --audio-format wav --audio-quality 0 --output {filename} --postprocessor-args "-ar 8000 -ac 1" ' + url + " --quiet"
     os.system(command)
 
 
@@ -75,9 +75,8 @@ def get_melgrams(file):
     return segments
 
 
-def youtube_to_melgram(url):
-    download_youtube(url)
-    melgrams = get_melgrams("temp.wav")
-    np.save("youtube_melgrams.npy", melgrams)
-
-download_youtube('https://www.youtube.com/watch?v=9E6b3swbnWg')
+def youtube_to_melgram(url,filename):
+    download_youtube(url,filename)
+    melgrams = get_melgrams(filename)
+    npy_name = filename[:len(filename) - 4] + '.npy'
+    np.save(npy_name, melgrams)
