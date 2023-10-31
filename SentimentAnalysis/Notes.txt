@@ -1,2 +1,3 @@
 Optimize Regressors for this job.
+Tune Logistic Regression as well as SGD Classifier with log loss
 Check notes.
