@@ -1,3 +1,2 @@
-Optimize Regressors for this job.
-Tune Logistic Regression as well as SGD Classifier with log loss
-Check notes.
+Finish pdf
+Export test set predictions to csv
