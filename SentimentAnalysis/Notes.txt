@@ -1,2 +1,0 @@
-Finish pdf
-Export test set predictions to csv
