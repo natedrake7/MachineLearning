@@ -1,0 +1,9 @@
+
+BERT/bert-base-greek-uncased-v1/
+BERT/processed_valid
+BERT/processed_test
+BERT/processed_df
+BERT/Data/valid_set.csv
+BERT/Data/train_set.csv
+BERT/Data/test_set.csv
+RNN_SentimentAnalysis/Data/word2vec_new.model
